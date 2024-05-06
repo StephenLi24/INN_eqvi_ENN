@@ -1,8 +1,19 @@
 # Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures
 
+[paper](https://arxiv.org/abs/2402.02697)
+
 This repo contains the official implementation for the ICML 2024 paper Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures.
 
-by [Zenan Ling](https://arxiv.org/search/cs?searchtype=author&query=Ling,+Z), [Longbo Li](https://arxiv.org/search/cs?searchtype=author&query=Li,+L), [Zhanbo Feng](https://arxiv.org/search/cs?searchtype=author&query=Feng,+Z), [Yixuan Zhang](https://arxiv.org/search/cs?searchtype=author&query=Zhang,+Y), [Feng Zhou](https://arxiv.org/search/cs?searchtype=author&query=Zhou,+F), [Robert C. Qiu](https://arxiv.org/search/cs?searchtype=author&query=Qiu,+R+C) and [Zhenyu Liao](https://arxiv.org/search/cs?searchtype=author&query=Liao,+Z).
+If you find the code useful, please refer to our work using:
+
+```
+@article{ling2024deep,
+  title={Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures},
+  author={Ling, Zenan and Li, Longbo and Feng, Zhanbo and Zhang, Yixuan and Zhou, Feng and Qiu, Robert C and Liao, Zhenyu},
+  journal={arXiv preprint arXiv:2402.02697},
+  year={2024}
+}
+```
 
 ## Running Experiments
 
@@ -19,9 +30,9 @@ The description of the files:
 ---two_layer_lrelu.py            # calculate the coeffiencients of two layer l_relu_enn activation function
 ---one_layer_tanh.py             # calculate the coeffiencients of one layer h_tanh_enn activation function
 ---Gaussian_Integration.py       # math function of calculating the matching network coeffiencients 
----fig3_cifar10.sh               # the script to get real experiment result of dataset cifar10
----fig3_mnist.sh                 # the script to get real experiment result of dataset mnist
----fig3_fashion_mnist.sh         # the script to get real experiment result of dataset fashion mnist
+---cifar10.sh               	 # the script to get the experiment result of cifar10
+---mnist.sh                 	 # the script to get the experiment result of mnist
+---fashion_mnist.sh         	 # the script to get the experiment result of FashionMnist
 
 ---ck_ntk:                       #  the floder, where contains some theoretical programs and visualization data
   ---ck_gmm_matching.py
