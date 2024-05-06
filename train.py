@@ -7,7 +7,7 @@ import numpy as np
 from torch.utils.tensorboard import SummaryWriter
 
 class model_train():
-    def __init__(self, model, model_name, train_loader, test_loader, dim=1024, epoch_number=150, lr=1e-3, device='cuda:0', output_path = './result', dataset_name = 'mnist', log_dir = './result_sgd_second/'):
+    def __init__(self, model, model_name, train_loader, test_loader, dim=1024, epoch_number=150, lr=1e-3, device='cuda:0', output_path = './result', dataset_name = 'mnist', log_dir = './result_sgd_second/', opt = 'sgd'):
         super().__init__()
         self.model = model
         self.model_name = model_name
@@ -21,6 +21,7 @@ class model_train():
         self.dataset_name = dataset_name
         self.fileName = str(self.dim) + str(self.model_name) + str(self.lr) + str(dataset_name)
         self.writer = SummaryWriter(log_dir= (log_dir + self.fileName))
+        self.opt = opt
     def epoch(self, loader, opt=None):
         total_loss, total_err = 0., 0.
         self.model.eval() if opt is None else self.model.train()
@@ -41,9 +42,12 @@ class model_train():
 
     def cifar10_train(self):
         # opt = optim.Adam(self.model.parameters(), lr=self.lr)
-        opt = optim.SGD(self.model.parameters(),
-                                    lr=self.lr,
-                                    momentum=0)
+        if self.opt == 'sgd':
+            opt = optim.SGD(self.model.parameters(),
+                                        lr=self.lr,
+                                        momentum=0)
+        elif(self.opt == 'adam'):
+            opt = optim.Adam(self.model.parameters(), lr=self.lr)
         print("# Parmeters: ", sum(a.numel() for a in self.model.parameters()))
 
         # create a summary writer with automatically generated folder name.
@@ -82,9 +86,15 @@ class model_train():
         lr = self.lr
         epochs = self.epoch_number
         # optimizer = optim.Adam(self.model.parameters(), lr=lr)
-        optimizer = optim.SGD(self.model.parameters(),
-                                    lr=lr,
-                                    momentum=0)
+        # optimizer = optim.SGD(self.model.parameters(),
+        #                             lr=lr,
+        #                             momentum=0)
+        if self.opt == 'sgd':
+            optimizer = optim.SGD(self.model.parameters(),
+                                        lr=self.lr,
+                                        momentum=0)
+        elif self.opt == 'adam':
+            optimizer = optim.Adam(self.model.parameters(), lr=self.lr)
         criterion = nn.CrossEntropyLoss()
         target_folder = self.output_path
         if not os.path.isdir(target_folder):

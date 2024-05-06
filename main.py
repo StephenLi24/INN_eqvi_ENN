@@ -24,6 +24,7 @@ def parse_args_and_config():
     parser.add_argument('--vgg_path',type=str, default='./pretrained/cifar10_vgg.pth', help = 'pretrained vgg model path')
     parser.add_argument('--output_path', type=str, default='./result/', help='output path')
     parser.add_argument('--asquare', type=float, default=0.2, help='square of varience of w matrix in relu')
+    parser.add_argument('--opt', type=str, default='sgd', help='sgd or adam')
     args = parser.parse_args()
     return args
 
@@ -95,7 +96,7 @@ def main():
             print('Wrong model name! Choose your model:l_relu_enn, inn, relu_enn, tanh_inn, h_tanh_enn, tanh_enn')
             return False
         mnist = model_train(model = model, model_name = args.model, train_loader = train_loader, test_loader = test_loader,
-                                dim = dim, epoch_number= args.epoch, lr=args.lr, device=args.device, output_path = args.output_path, dataset_name = args.dataset)
+                                dim = dim, epoch_number= args.epoch, lr=args.lr, device=args.device, output_path = args.output_path, dataset_name = args.dataset, opt = args.opt)
         mnist.mnist_train()
         print('Successfully!')
         return 0
@@ -136,7 +137,7 @@ def main():
             print('Wrong model name, choose your model from:l_relu_enn, inn, relu_enn, tanh_inn, h_tanh_enn, tanh_enn')
             return False
         cifar10 = model_train(model = model, model_name = args.model, train_loader = train_loader, test_loader = test_loader,
-                                dim = dim, epoch_number= args.epoch, lr=args.lr, device=args.device, output_path = args.output_path, dataset_name = args.dataset)
+                                dim = dim, epoch_number= args.epoch, lr=args.lr, device=args.device, output_path = args.output_path, dataset_name = args.dataset, opt = args.opt)
         cifar10.cifar10_train()
         print('Successfully!')
         return 0
