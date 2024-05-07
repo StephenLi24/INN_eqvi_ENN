@@ -32,10 +32,10 @@ The description of the files:
 ---Gaussian_Integration.py       # math function of calculating the matching network coeffiencients 
 ---sgd_cifar10.sh                # the script to get the experiment result of CIFAR-10 using sgd
 ---adam_cifar10.sh             	 # the script to get the experiment result of CIFAR-10 using adam
----sgd_mnist.sh                 	 # the script to get the experiment result of MNIST using sgd
----adam_mnist.sh                 	 # the script to get the experiment result of MNIST using adam
----sgd_fashion_mnist.sh         	 # the script to get the experiment result of Fashion-MNIST using sgd
----adam_fashion_mnist.sh         	 # the script to get the experiment result of Fashion-MNIST using adam
+---sgd_mnist.sh                  # the script to get the experiment result of MNIST using sgd
+---adam_mnist.sh                 # the script to get the experiment result of MNIST using adam
+---sgd_fashion_mnist.sh          # the script to get the experiment result of Fashion-MNIST using sgd
+---adam_fashion_mnist.sh         # the script to get the experiment result of Fashion-MNIST using adam
 
 
 ---ck_ntk:                       #  the floder, where contains some theoretical programs and visualization data
