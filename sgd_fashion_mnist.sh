@@ -10,7 +10,7 @@ do
     --model  $model\
     --asquare 0.2\
     --lr 1\
-    --epoch 2\
+    --epoch 100\
     --batch_size 128\
     --device 'cuda:2';
   done;

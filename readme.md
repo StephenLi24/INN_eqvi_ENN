@@ -30,9 +30,13 @@ The description of the files:
 ---two_layer_lrelu.py            # calculate the coeffiencients of two layer l_relu_enn activation function
 ---one_layer_tanh.py             # calculate the coeffiencients of one layer h_tanh_enn activation function
 ---Gaussian_Integration.py       # math function of calculating the matching network coeffiencients 
----cifar10.sh               	 # the script to get the experiment result of cifar10
----mnist.sh                 	 # the script to get the experiment result of mnist
----fashion_mnist.sh         	 # the script to get the experiment result of FashionMnist
+---sgd_cifar10.sh                # the script to get the experiment result of CIFAR-10 using sgd
+---adam_cifar10.sh             	 # the script to get the experiment result of CIFAR-10 using adam
+---sgd_mnist.sh                 	 # the script to get the experiment result of MNIST using sgd
+---adam_mnist.sh                 	 # the script to get the experiment result of MNIST using adam
+---sgd_fashion_mnist.sh         	 # the script to get the experiment result of Fashion-MNIST using sgd
+---adam_fashion_mnist.sh         	 # the script to get the experiment result of Fashion-MNIST using adam
+
 
 ---ck_ntk:                       #  the floder, where contains some theoretical programs and visualization data
   ---ck_gmm_matching.py

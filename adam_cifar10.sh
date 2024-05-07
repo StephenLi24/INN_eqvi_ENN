@@ -6,12 +6,13 @@ do
   for model in ${models[@]}
   do
   python main.py --dim $dim \
-    --dataset 'cifar10'\
+    --dataset 'mnist'\
     --model  $model\
     --asquare 0.2\
-    --lr 0.1\
+    --lr 1\
     --epoch 100\
     --batch_size 128\
+    --opt 'adam'\
     --device 'cuda:2';
   done;
 done
