@@ -57,12 +57,18 @@ The description of the files:
 
 ```
 
-usage: main.py [-h] [--dataset DATASET] [--model MODEL] [--dim DIM] [--lr LR] [--epoch EPOCH] [--batch_size BATCH_SIZE] [--save_path SAVE_PATH] [--dataset_path DATASET_PATH] [--device DEVICE] [--vgg_path VGG_PATH]
+usage: main.py [-h] [--dataset DATASET] [--model MODEL] [--dim DIM]
+               [--lr LR] [--epoch EPOCH] [--batch_size BATCH_SIZE]
+               [--save_path SAVE_PATH] [--dataset_path DATASET_PATH]
+               [--device DEVICE] [--vgg_path VGG_PATH]
                [--output_path OUTPUT_PATH] [--asquare ASQUARE]
+               [--opt OPT]
+
 options:
   -h, --help            show this help message and exit
   --dataset DATASET     Choose from mnist, fashion_mnist, cifar10
-  --model MODEL         Choose your model:l_relu_enn, inn, relu_enn, tanh_inn, h_tanh_enn, tanh_enn
+  --model MODEL         Choose your model:l_relu_enn, inn, relu_enn,
+                        tanh_inn, h_tanh_enn, tanh_enn
   --dim DIM             The dimension of our exp
   --lr LR               learning rate
   --epoch EPOCH         epoch number
@@ -77,5 +83,6 @@ options:
   --output_path OUTPUT_PATH
                         output path
   --asquare ASQUARE     square of varience of w matrix in relu
+  --opt OPT             sgd or adam
 
 ```
