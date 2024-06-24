@@ -7,11 +7,13 @@ This repo contains the official implementation for the ICML 2024 paper Deep Equi
 If you find the code useful, please refer to our work using:
 
 ```
-@article{ling2024deep,
-  title={Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures},
-  author={Ling, Zenan and Li, Longbo and Feng, Zhanbo and Zhang, Yixuan and Zhou, Feng and Qiu, Robert C and Liao, Zhenyu},
-  journal={arXiv preprint arXiv:2402.02697},
-  year={2024}
+@inproceedings{
+ling2024deep,
+title={Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures},
+author={Zenan Ling and Longbo Li and Zhanbo Feng and YIXUAN ZHANG and Feng Zhou and Robert C Qiu and Zhenyu Liao},
+booktitle={Forty-first International Conference on Machine Learning},
+year={2024},
+url={https://openreview.net/forum?id=ddjRdm3wUW}
 }
 ```
 
