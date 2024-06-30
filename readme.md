@@ -1,6 +1,6 @@
 # Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures
 
-[paper](https://arxiv.org/abs/2402.02697)
+[paper](https://openreview.net/forum?id=ddjRdm3wUW)
 
 This repo contains the official implementation for the ICML 2024 paper Deep Equilibrium Models are Almost Equivalent to Not-so-deep Explicit Models for High-dimensional Gaussian Mixtures.
 
